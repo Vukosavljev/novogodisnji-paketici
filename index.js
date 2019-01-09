@@ -24,6 +24,7 @@ document.getElementById('izaberi-poklon').addEventListener('click', function (e)
     let zenski = document.getElementById('zenski').checked;
     
     if(/^[A-ZŠĐČĆŽ]{2,}$/gi.test(ime) && (muski || zenski)) {
+        document.getElementById('tabela').style.display = 'block';
         if(muski) {
             document.getElementById('lutka-cena').style .backgroundColor = 'red';
             document.getElementById('lutka-cena').readOnly = true;
@@ -46,7 +47,6 @@ document.getElementById('izaberi-poklon').addEventListener('click', function (e)
     }
 });
 
-document.getElementById('tabela').style.display = 'block';
 document.getElementById('odustani').addEventListener('click', function () {
     location.reload();
 })
