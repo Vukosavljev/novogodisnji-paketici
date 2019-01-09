@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Novogodisnji pokloni</title>
+    <style>
+    body {
+        background-image: url('./img/deda-mraz.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 1.45rem;
+    }
+    </style>
+</head>
+<body>
+    <h3>Izabrali ste sledece artikle:</h3>
+    <p>Lopta <span id="lopta"></span> kom</p>
+    <p>Ukras <span id="ukras"></span> kom</p>
+    <p>Slatkisa <span id="slatkisa"></span> kom</p>
+    <p>Lutka <span id="lutka"></span> kom</p>
+    <p>Auto <span id="auto"></span> kom</p>
+    <p>Vas ukupan iznos je <span id="ukupno"></span></p>
+    <h2>Da li potvrdjujete kupovinu:</h2>
+    <button id="da">DA</button>
+    <button id="ne">NE</button>
+
+    <script>
+        let paketici = []
+        if (localStorage.getItem('paketici') !== null) {
+            paketici = JSON.parse(localStorage.getItem('paketici'))
+        }
+        console.log(paketici[5])
+        document.getElementById('lopta').innerHTML = paketici[0].kolicina;
+        document.getElementById('ukras').innerHTML = paketici[1].kolicina;
+        document.getElementById('slatkisa').innerHTML = paketici[2].kolicina;
+        document.getElementById('lutka').innerHTML = paketici[3].kolicina;
+        document.getElementById('auto').innerHTML = paketici[4].kolicina;
+        document.getElementById('ukupno').innerHTML = paketici[5];
+
+        document.getElementById('da').addEventListener('click', function () {
+            alert('Vasa kupovina je potvrdjena :D');
+            close();
+        });
+        document.getElementById('ne').addEventListener('click', function () {
+            alert('Dovidjenja :D');
+            close();
+        });
+        
+    </script>
+</body>
+</html>

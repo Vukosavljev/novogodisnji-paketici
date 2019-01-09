@@ -1,0 +1,27 @@
+* {
+    font-size: 1.2rem;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('./img/ledena-suma.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+form {
+    text-align: center;
+    background: #fff;
+}
+table {
+    display: none;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

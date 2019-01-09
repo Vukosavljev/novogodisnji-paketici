@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Nova godina </title>
+</head>
+
+<body>
+    <header>
+        <img src="./img/header.png" alt="header">
+    </header>
+    <form>
+        <label for="ime">Ime</label>
+        <input type="text" id="ime">
+        Pol:
+        <input type="radio" name="pol" id="muski">
+        <label for="muski">Muski</label>
+        <input type="radio" name="pol" id="zenski">
+        <label for="zenski">Zenski</label>
+        <p>
+            <label for="select-poklon">
+                Vrednost poklona do (RSD):
+            </label>
+            <select id="select-value">
+                <option value="2000" selected>2000</option>
+                <option value="3000">3000</option>
+                <option value="5000">5000</option>
+            </select>
+        </p>
+        <button id="izaberi-poklon">Izaberite poklon</button>
+    </form>
+
+    <table id="tabela">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Cena:</th>
+                <th>Kolicina: </th>
+                <th>Ukupno:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lopta:</td>
+                <td><input type="text" readonly placeholder="750"></td>
+                <td><input type="number" class="kolicina" value="0" id="lopta-kolicina"></td>
+                <td><input type="text" class="ukupno" readonly id="lopta-ukupno"></td>
+            </tr>
+            <tr>
+                <td>Novogodisnji ukrasi:</td>
+                <td><input type="text" readonly placeholder="400"></td>
+                <td><input type="number" class="kolicina" value="0" id="NU-kolicina"></td>
+                <td><input type="text" class="ukupno" readonly id="NU-ukupno"></td>
+            </tr>
+            <tr>
+                <td>Slatkisi:</td>
+                <td><input type="text" readonly placeholder="400"></td>
+                <td><input type="number" class="kolicina" value="0" id="slatkisi-kolicina"></td>
+                <td><input type="text" class="ukupno" readonly id="slatkisi-ukupno"></td>
+            </tr>
+            <tr>
+                <td>Lutka:</td>
+                <td><input type="text" readonly placeholder="1100" id="lutka-cena"></td>
+                <td><input type="number" id="lutka-kolicina" class="kolicina" value="0"></td>
+                <td><input type="text" class="ukupno" id="lutka-ukupno" readonly></td>
+            </tr>
+            <tr>
+                <td>Automobil:</td>
+                <td><input type="text" readonly placeholder="1100" id="automobil-cena"></td>
+                <td><input type="number" id="automobil-kolicina" class="kolicina" value="0"></td>
+                <td><input type="text" class="ukupno" id="automobil-ukupno" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button id="potvrdi-kupovinu">Potvrdi kupovinu</button></td>
+                <td colspan="2"><button id="odustani">Odustani</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
